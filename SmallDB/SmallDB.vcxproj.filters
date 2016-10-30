@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ExampleData">
+      <UniqueIdentifier>{b0aac5a2-9a02-4217-84d2-dfff6ae8f0ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SMDB">
+      <UniqueIdentifier>{2946f834-6003-4acc-bd43-29f1f3ba1e53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SMDB">
+      <UniqueIdentifier>{97561e1b-9a2a-4ad0-8559-7125abc493da}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+    <Text Include="structure.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SMDB.h">
+      <Filter>Header Files\SMDB</Filter>
+    </ClInclude>
+    <ClInclude Include="TableDefinition.h">
+      <Filter>Header Files\SMDB</Filter>
+    </ClInclude>
+    <ClInclude Include="Name.h">
+      <Filter>Header Files\SMDB</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums.h">
+      <Filter>Header Files\SMDB</Filter>
+    </ClInclude>
+    <ClInclude Include="Key.h">
+      <Filter>Header Files\SMDB</Filter>
+    </ClInclude>
+    <ClInclude Include="Misc.h">
+      <Filter>Header Files\SMDB</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallDB.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SMDB.cpp">
+      <Filter>Source Files\SMDB</Filter>
+    </ClCompile>
+    <ClCompile Include="TableDefinition.cpp">
+      <Filter>Source Files\SMDB</Filter>
+    </ClCompile>
+    <ClCompile Include="Name.cpp">
+      <Filter>Source Files\SMDB</Filter>
+    </ClCompile>
+    <ClCompile Include="Key.cpp">
+      <Filter>Source Files\SMDB</Filter>
+    </ClCompile>
+    <ClCompile Include="Misc.cpp">
+      <Filter>Source Files\SMDB</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="exampleDB.smdb">
+      <Filter>ExampleData</Filter>
+    </None>
+    <None Include="output.smdb">
+      <Filter>ExampleData</Filter>
+    </None>
+  </ItemGroup>
+</Project>

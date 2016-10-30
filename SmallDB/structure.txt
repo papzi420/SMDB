@@ -1,0 +1,29 @@
+File:
+	signature: "SMDB" 4 bytes
+	tabledefintions: seperated by 1's
+	tabledefintionsend: 1 byte (0)
+	data: datadefinitions seperated by 1's
+
+Tabledefinition:
+	signature: "T" 1 byte
+	name: Name
+	Keys: seperated by null
+	KeysEnd: (char) 1, 1 byte
+
+	totalbytes: 3 + name.length + typesignatures
+
+Key:
+	name: name
+	typesignature: type ( 1 byte )
+
+Name:
+	length: number 1 byte
+	name: char array namelength bytes long
+
+	totalbytes: 1 + length
+
+types:
+	text: 1
+		char signature = 1 (1 byte)
+		int length (4 byte)
+		char[length] value (length bytes)
