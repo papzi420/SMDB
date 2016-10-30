@@ -15,24 +15,34 @@ namespace SMDB {
 		name = Name(file);
 		std::cout << "read name\n";
 		/* Read the keys */
-		char oneMore = true;
+		char oneMore = ' ';
+		file->read(&oneMore, 1);
 		while (oneMore) {
 			keys.push_back(Key(file));
 			file->read(&oneMore, 1);
 		}
 	}
 
+	TableDefinition::TableDefinition(Name _name)
+	{
+		name = _name;
+	}
+
+	TableDefinition::TableDefinition(std::vector<Key> _keys, Name _name)
+	{
+		keys = _keys;
+		name = _name;
+	}
+
 	void TableDefinition::save(std::ofstream* file) {
 		file->write(&signature, 1);
 		name.save(file);
 		for (unsigned int i = 0; i < keys.size(); i++) {
+			file->write(new char[1]{ 1 }, 1);
 			Key key = keys[i];
 			key.save(file);
-			if (i + 1 == keys.size())
-				file->write(new char[1]{ 0 }, 1);
-			else
-				file->write(new char[1]{ 1 }, 1);
 		}
+		file->write(new char[1]{ 0 }, 1);
 	}
 	char TableDefinition::signature = 'T';
 }

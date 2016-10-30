@@ -20,7 +20,9 @@ namespace SMDB {
 		std::vector<TableDefinition> tableDefintions;
 		std::ifstream* file;
 
+		File();
 		File(std::ifstream inputFile);
+
 		void save(std::ofstream outputFile);
 	};
 }

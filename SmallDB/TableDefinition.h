@@ -19,7 +19,10 @@ namespace SMDB {
 		Name name;
 		std::vector<Key> keys;
 		void save(std::ofstream* file);
+
 		TableDefinition(std::ifstream* file);
+		TableDefinition(Name _name);
+		TableDefinition(std::vector<Key> _keys, Name _name);
 	};
 	
 }

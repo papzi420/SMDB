@@ -17,5 +17,6 @@ namespace SMDB {
 
 		void save(std::ofstream* file);
 		Key(std::ifstream* file);
+		Key(Name _name, Enums::TypeSignature _type);
 	};
 }

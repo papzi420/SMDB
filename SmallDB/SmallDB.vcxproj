@@ -172,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="exampleDB.smdb" />
+    <None Include="exampleDB.smdb.old" />
     <None Include="output.smdb" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

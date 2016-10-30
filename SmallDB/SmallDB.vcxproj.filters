@@ -82,10 +82,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="exampleDB.smdb">
+    <None Include="output.smdb">
       <Filter>ExampleData</Filter>
     </None>
-    <None Include="output.smdb">
+    <None Include="exampleDB.smdb.old">
+      <Filter>ExampleData</Filter>
+    </None>
+    <None Include="exampleDB.smdb">
       <Filter>ExampleData</Filter>
     </None>
   </ItemGroup>

@@ -4,7 +4,8 @@ namespace SMDB {
 	class Enums {
 	public:
 		enum TypeSignature {
-			string
+			string,
+			date
 		};
 		static const std::string enumToText[];
 	};

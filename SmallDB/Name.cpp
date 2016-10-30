@@ -7,6 +7,11 @@ namespace SMDB {
 		name = "";
 	}
 
+	Name::Name(std::string _name) {
+		length = _name.length();
+		name = _name;
+	}
+
 	Name::Name(std::ifstream* file) {
 		file->read(&length, 1);
 		name = std::string(length, ' ');

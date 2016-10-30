@@ -17,5 +17,6 @@ namespace SMDB {
 		void save(std::ofstream* file);
 		Name();
 		Name(std::ifstream* file);
+		Name(std::string _name);
 	};
 }
