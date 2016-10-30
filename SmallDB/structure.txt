@@ -1,32 +1,36 @@
+// This is a shitty spec sheet for the file type
+
 File:
-	signature: "SMDB" 4 bytes
+	signature: "SMDB"
 	tabledefintions: seperated by 1's
-	tabledefintionsend: 1 byte (0)
+	tabledefintionsend: 0
 	data: datadefinitions seperated by 1's
 
 Tabledefinition:
-	signature: "T" 1 byte
+	signature: "T"
 	name: Name
 	Keys: seperated by null
-	KeysEnd: (char) 1, 1 byte
-
-	totalbytes: 3 + name.length + typesignatures
+	KeysEnd: (char) 1
 
 Key:
 	name: name
-	typesignature: type ( 1 byte )
+	typesignature: type
 
 Name:
-	length: number 1 byte
+	length: number
 	name: char array namelength bytes long
 
-	totalbytes: 1 + length
-
-Datasection:
+Datadefinition:
 	signature: "D" 1 byte
+	name: Name of the tabledefinition for the data
+	rows: rows seperated by 1's
+
+Row:
+	the type data with no seperation
 	
 types:
-	text: 1
-		char signature = 1 (1 byte)
-		int length (4 byte)
+	string: 0
+		int length
 		char[length] value (length bytes)
+	date: 1
+		int64 date
