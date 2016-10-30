@@ -13,7 +13,7 @@ int main()
 	for (SMDB::TableDefinition &tableDefintion : database.tableDefintions) {
 		printf("%s: ", tableDefintion.name.name.c_str());
 		for (SMDB::Key &key : tableDefintion.keys) {
-			//printf("{%s %s}, ", SMDB::enums::m[key.type], key.name.name.c_str());
+			printf("{%s %s}, ", SMDB::Enums::enumToText[key.type].c_str(), key.name.name.c_str());
 		}
 		printf("\n");
 	}

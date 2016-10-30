@@ -77,6 +77,9 @@
     <ClCompile Include="Misc.cpp">
       <Filter>Source Files\SMDB</Filter>
     </ClCompile>
+    <ClCompile Include="Enums.cpp">
+      <Filter>Source Files\SMDB</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="exampleDB.smdb">

@@ -156,6 +156,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Enums.cpp" />
     <ClCompile Include="Key.cpp" />
     <ClCompile Include="Misc.cpp" />
     <ClCompile Include="Name.cpp" />

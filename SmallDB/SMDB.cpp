@@ -2,14 +2,6 @@
 #include "SMDB.h"
 
 namespace SMDB {
-	void error(std::string str) {
-		SetConsoleTextAttribute(GetStdHandle(STD_INPUT_HANDLE), 0x0C);
-		printf("%s\nFatal error...\nPress any key to quit...\n", str.c_str());
-		_getch();
-		printf("Quiting...");
-		exit(1);
-	}
-
 	File::File(std::ifstream inputFile)
 	{
 		file = &inputFile;
@@ -21,7 +13,7 @@ namespace SMDB {
 			printf("Found file signature\n");
 		}
 		else {
-			error("malformed DB...\nGot signature: " + signature + ", expected: SMDB");
+			SMDB::Misc::error("malformed DB...\nGot signature: " + signature + ", expected: SMDB");
 		}
 
 		char oneMore = true;

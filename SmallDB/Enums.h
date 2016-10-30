@@ -1,9 +1,11 @@
 #pragma once
+#include <string>
 namespace SMDB {
-	static class Enums {
+	class Enums {
 	public:
 		enum TypeSignature {
 			string
 		};
+		static const std::string enumToText[];
 	};
 }
