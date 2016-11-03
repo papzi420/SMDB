@@ -9,8 +9,8 @@ File:
 Tabledefinition:
 	signature: "T"
 	name: Name
-	Keys: seperated by null
-	KeysEnd: (char) 1
+	Keys: seperated by 1's
+	KeysEnd: (char) 0
 
 Key:
 	name: name

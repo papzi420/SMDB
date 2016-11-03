@@ -23,18 +23,31 @@ namespace SMDB {
 			tableDefintions.push_back(TableDefinition(file));
 			inputFile.read(&oneMore, 1);
 		}
+
+		inputFile.read(&oneMore, 1);
+		while (oneMore) {
+			std::cout << "found new table data\n";
+			dataDefintions.push_back(DataDefinition(file, tableDefintions));
+			inputFile.read(&oneMore, 1);
+		}
 		file->close();
 	}
 
 	File::File() {
 
 	}
+
 	void File::save(std::ofstream outputFile) {
 		outputFile.write("SMDB", 4);
 		for (unsigned int i = 0; i < tableDefintions.size(); i++) {
 			outputFile.write(new char[1]{ 1 }, 1);
 			TableDefinition tableDefintion = tableDefintions[i];
 			tableDefintion.save(&outputFile);
+		}
+		outputFile.write(new char[1]{ 0 }, 1);
+		for (DataDefinition dataDefinition : dataDefintions) {
+			outputFile.write(new char[1]{ 1 }, 1);
+			dataDefinition.save(&outputFile);
 		}
 		outputFile.write(new char[1]{ 0 }, 1);
 		outputFile.close();

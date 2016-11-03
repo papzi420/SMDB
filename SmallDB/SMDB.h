@@ -8,6 +8,7 @@
 #include <vector>
 #include <map>
 #include "TableDefinition.h"
+#include "DataDefinition.h"
 
 namespace SMDB {
 
@@ -18,6 +19,7 @@ namespace SMDB {
 	public:
 		std::string signature;
 		std::vector<TableDefinition> tableDefintions;
+		std::vector<DataDefinition> dataDefintions;
 		std::ifstream* file;
 
 		File();

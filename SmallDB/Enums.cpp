@@ -1,5 +1,5 @@
 #include "stdafx.h"
 #include "Enums.h"
 namespace SMDB {
-	const std::string Enums::enumToText[] = { "string", "date" };
+	const std::string Enums::enumToText[] = { "text", "date" };
 }

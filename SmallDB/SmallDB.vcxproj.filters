@@ -54,6 +54,12 @@
     <ClInclude Include="Misc.h">
       <Filter>Header Files\SMDB</Filter>
     </ClInclude>
+    <ClInclude Include="DataDefinition.h">
+      <Filter>Header Files\SMDB</Filter>
+    </ClInclude>
+    <ClInclude Include="Row.h">
+      <Filter>Header Files\SMDB</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -78,6 +84,12 @@
       <Filter>Source Files\SMDB</Filter>
     </ClCompile>
     <ClCompile Include="Enums.cpp">
+      <Filter>Source Files\SMDB</Filter>
+    </ClCompile>
+    <ClCompile Include="DataDefinition.cpp">
+      <Filter>Source Files\SMDB</Filter>
+    </ClCompile>
+    <ClCompile Include="Row.cpp">
       <Filter>Source Files\SMDB</Filter>
     </ClCompile>
   </ItemGroup>

@@ -2,6 +2,9 @@
 #include "TableDefinition.h"
 
 namespace SMDB {
+	TableDefinition::TableDefinition()
+	{
+	}
 
 	TableDefinition::TableDefinition(std::ifstream* file) {
 		file->read(&signature, 1);
@@ -14,6 +17,7 @@ namespace SMDB {
 		std::cout << "reading name\n";
 		name = Name(file);
 		std::cout << "read name\n";
+
 		/* Read the keys */
 		char oneMore = ' ';
 		file->read(&oneMore, 1);
